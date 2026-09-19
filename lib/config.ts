@@ -11,6 +11,13 @@ export const PRICING = {
   saleUsd: 20,
 } as const;
 
+/** One 20 USD payment = source + Vercel for both apps. Not the 9 EUR unlock. */
+export const BUNDLE = {
+  partnerName: "Offertly",
+  thisUrl: "https://rechnungly.vercel.app",
+  partnerUrl: "https://offertly.vercel.app",
+} as const;
+
 export const IMPRESSUM = {
   name: "Bernhard Stieger",
   street: "Staatsstrasse 11",

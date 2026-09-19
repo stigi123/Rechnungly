@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { SalePanel } from "@/components/sale-cta";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { trackUnlockClick } from "@/lib/analytics";
 import { PRICING } from "@/lib/config";
@@ -11,10 +12,8 @@ import { cn } from "@/lib/utils";
 
 export function UnlockPanel({
   paypalUnlock,
-  paypalSale,
 }: {
   paypalUnlock: string;
-  paypalSale: string;
 }) {
   const { days } = useUnlockState();
   const [justUnlocked, setJustUnlocked] = useState(false);
@@ -65,21 +64,7 @@ export function UnlockPanel({
         </div>
       </div>
 
-      <div className="rounded-2xl border border-dashed border-border p-5">
-        <p className="text-sm font-medium">Optional: ganze App verkaufen</p>
-        <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Rechnungly kann später als Gesamtprodukt abgegeben werden — Source und Deploy-Handoff für{" "}
-          {PRICING.saleUsd} USD. Kein automatischer Git-Zugang, Übergabe nach PayPal-Nachricht.
-        </p>
-        <a
-          href={paypalSale}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(buttonVariants({ variant: "outline", size: "lg" }), "mt-4 inline-flex h-11 px-5")}
-        >
-          {PRICING.saleUsd} USD via PayPal
-        </a>
-      </div>
+      <SalePanel />
     </div>
   );
 }
