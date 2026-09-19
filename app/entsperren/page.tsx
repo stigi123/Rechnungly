@@ -16,7 +16,7 @@ export default function EntsperrenPage() {
         PayPal bestätigt die Zahlung nicht automatisch an diese App — danach schaltest du diesen
         Browser selbst frei.
       </p>
-      <UnlockPanel paypalUnlock={PAYPAL.unlock} paypalSale={PAYPAL.sale} />
+      <UnlockPanel paypalUnlock={PAYPAL.unlock} />
     </div>
   );
 }

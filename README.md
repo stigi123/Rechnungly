@@ -2,7 +2,7 @@
 
 Browser-only A4 invoice (`Rechnung`) PDF for freelancers in DE, AT and CH. German UI, no accounts, no Stripe, no Google Analytics cookies.
 
-Demo PDFs are watermarked. Unlock is **9 EUR / 30 days** via PayPal. The whole app can be sold for **20 USD** (source + deploy handoff).
+Demo PDFs are watermarked. Unlock is **9 EUR / 30 days** via PayPal. The **20 USD** sale is a bundle: source + Vercel for both Rechnungly and Offertly.
 
 ## Run locally
 
@@ -33,7 +33,7 @@ Invoice drafts and the 30-day unlock flag live in `localStorage` on this device.
 ## PayPal
 
 - Unlock: [paypal.me/NathanStieger/9EUR](https://paypal.me/NathanStieger/9EUR)
-- Whole app: [paypal.me/NathanStieger/20USD](https://paypal.me/NathanStieger/20USD)
+- Bundle (Rechnungly + Offertly, source + Vercel): [paypal.me/NathanStieger/20USD](https://paypal.me/NathanStieger/20USD)
 
 ## Analytics
 

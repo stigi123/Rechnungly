@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { CreateCta } from "@/components/create-cta";
+import { SaleBanner } from "@/components/sale-cta";
 import { buttonVariants } from "@/components/ui/button";
-import { APP_NAME, PAYPAL, PRICING } from "@/lib/config";
+import { APP_NAME, PRICING } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 export default function HomePage() {
@@ -64,26 +65,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto mb-16 w-full max-w-6xl px-4 sm:px-6">
-        <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground sm:px-10">
-          <p className="text-xs tracking-[0.2em] uppercase opacity-80">Gesamt-App</p>
-          <h2 className="mt-2 text-3xl tracking-tight">Source + Deploy für {PRICING.saleUsd} USD</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-primary-foreground/85">
-            Wer das ganze Produkt kaufen will: Next.js-Quellcode und ein Deploy-Handoff. Zahlung über
-            PayPal. Danach Nachricht an denselben PayPal-Account für die Übergabe. Kein automatischer
-            Download, kein erfundener Support-Kanal.
-          </p>
-          <a
-            href={PAYPAL.sale}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              buttonVariants({ variant: "secondary", size: "lg" }),
-              "mt-6 inline-flex h-11 px-5",
-            )}
-          >
-            {PRICING.saleUsd} USD via PayPal
-          </a>
-        </div>
+        <SaleBanner />
       </section>
     </div>
   );
